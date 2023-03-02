@@ -1,0 +1,28 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(65,141,158);
+  background: linear-gradient(90deg, rgba(65,141,158,1) 0%, rgba(102,83,168,1) 32%, rgba(0,212,255,1) 100%);
+  font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
+section {
+  min-height: 70vh;
+  margin-top: 30vh;
+  margin-right: 30%;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}

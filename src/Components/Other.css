@@ -1,0 +1,25 @@
+.otherHeader {
+    text-align: center;
+    font-size: clamp(1.7rem, 2.5vw, 4rem);
+    color: whitesmoke;
+    opacity: 0.9;
+}
+
+.otherText {
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 24%;
+    font-size: larger;
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+    .otherText {
+        margin-right: 0;
+        margin-left: 10%;
+    }
+
+    .otherHeader {
+        margin-left: 10%;
+    }
+}

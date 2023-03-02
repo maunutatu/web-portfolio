@@ -1,0 +1,26 @@
+.aboutMeHeader {
+    text-align: center;
+    font-size: clamp(1.7rem, 2.5vw, 4rem);
+    color: whitesmoke;
+    opacity: 0.9;
+}
+
+.aboutMeText {
+    text-align: center;
+    margin-right: 28%;
+    margin-left: 26%;
+    font-size: larger;
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 600px) {
+    .aboutMeHeader {
+        margin-left: 20%;
+        margin-right: 10%;
+    }
+
+    .aboutMeText {
+        margin-right: 0;
+        margin-left: 15%;
+    }
+}

@@ -1,0 +1,25 @@
+.skillsHeader {
+    text-align: center;
+    margin-right: 40%;
+    margin-left: 35%;
+    font-size: clamp(1.7rem, 2.5vw, 4rem);
+    color: whitesmoke;
+    opacity: 0.8;
+}
+
+.skillSection {
+    border: 1px solid black;
+    background: whitesmoke;
+    border-radius: 5%;
+    margin: 20px;
+}
+
+.skillHeader {
+    margin: 10px;
+}
+
+li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+

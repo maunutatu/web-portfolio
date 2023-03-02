@@ -1,0 +1,12 @@
+.projectsHeader {
+    text-align: center;
+    font-size: clamp(1.7rem, 2.5vw, 4rem);
+    color: whitesmoke;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .projectsHeader {
+        margin-left: 10%;
+    }
+}

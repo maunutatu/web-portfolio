@@ -1,0 +1,39 @@
+.projectImage {
+    width: 500px;
+}
+
+.projectHeader {
+    text-align: center;
+    font-size: clamp(1.2rem, 1.5vw, 4rem);
+    color: whitesmoke;
+    opacity: 1;
+}
+
+.projectDescription {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 12%;
+    font-size: large;
+    color: whitesmoke;
+}
+
+.projectLink {
+    text-align: center;
+    font-size: large;
+    color: whitesmoke;
+}
+
+.project {
+    margin-bottom: 200px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .projectImage {
+        width: 300px;
+    }
+
+    .project {
+        margin-left: 10%;
+    }
+}
