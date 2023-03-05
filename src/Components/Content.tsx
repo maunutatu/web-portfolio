@@ -32,8 +32,8 @@ const Content = (props: ContentProps) => {
         setOpacityAboutSection(scroll.curve(1 / 13, 1 / 9))
         setOpacitySkillsSection(scroll.curve(2 / 10, 1 / 6))
         setOpacityProjectsSection(scroll.curve(3.5 / 20, 6 / 8))
-        setOpacityOtherSection(scroll.curve(6 / 8, 1.5 / 6))
-        setOpacityContactSection(scroll.curve(13.5 / 16 , 1.5 / 6))
+        setOpacityOtherSection(scroll.curve(6.2 / 8, 1.3 / 9))
+        setOpacityContactSection(scroll.curve(13.2 / 16 , 1.5 / 6))
     })
 
     return (
