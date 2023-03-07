@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unknown-property */
-import {useRef} from 'react';
+import {useRef, Suspense} from 'react';
 import './App.css';
 import {Canvas} from "@react-three/fiber";
 import Content from "./Components/Content";
 import {ScrollControls} from "@react-three/drei";
 import TatuAnimations from "./Components/TatuStanding";
+import Loading from './Components/Loading'
 
 function App() {
 
@@ -38,27 +39,29 @@ function App() {
 
   return (
       <>
-          <Canvas camera={{ position: [1, 1.5, 2.5], fov: 50 }} shadows>
-              <ambientLight />
-              <directionalLight
-                  position={[-5, 5, 5]}
-                  shadow-mapSize-width={1024}
-                  shadow-mapSize-height={1024}
-              />
-              <ScrollControls pages={pages()} damping={0}>
-              <group position={[positionX(), -0.9, positionZ()]}>
-                  <Content animationRef={animationRef}/>
-                  <TatuAnimations ref={animationRef}/>
-              </group>
-              <mesh
-                  rotation={[-0.5 * Math.PI, 0, 0]}
-                  position={[0, -1, 0]}
-              >
-                  <planeBufferGeometry args={[10, 10, 1, 1]} />
-                  <shadowMaterial opacity={0.2} />
-              </mesh>
-              </ScrollControls>
-          </Canvas>
+          <Suspense fallback={<Loading/>}>
+              <Canvas camera={{ position: [1, 1.5, 2.5], fov: 50 }} shadows>
+                  <ambientLight />
+                  <directionalLight
+                    position={[-5, 5, 5]}
+                    shadow-mapSize-width={1024}
+                    shadow-mapSize-height={1024}
+                  />
+                  <ScrollControls pages={pages()} damping={0}>
+                      <group position={[positionX(), -0.9, positionZ()]}>
+                          <Content animationRef={animationRef}/>
+                          <TatuAnimations ref={animationRef}/>
+                      </group>
+                      <mesh
+                        rotation={[-0.5 * Math.PI, 0, 0]}
+                        position={[0, -1, 0]}
+                      >
+                          <planeBufferGeometry args={[10, 10, 1, 1]} />
+                          <shadowMaterial opacity={0.2} />
+                      </mesh>
+                  </ScrollControls>
+              </Canvas>
+          </Suspense>
       </>
   );
 }

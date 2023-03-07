@@ -1,8 +1,9 @@
+import './Content.css'
 import {Scroll, useScroll} from "@react-three/drei";
 import Title from "./Title";
 import About from "./About";
 import Skills from "./Skills";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useFrame} from "@react-three/fiber";
 import Projects from "./Projects";
 import Other from "./Other";
@@ -22,9 +23,6 @@ const Content = (props: ContentProps) => {
     const [opacityOtherSection, setOpacityOtherSection] = useState(1)
     const [opacityContactSection, setOpacityContactSection] = useState(1)
 
-    /* useEffect(() => {
-        props.animationRef.current.waveAnimation()
-    }, []) */
 
 
     useFrame(() => {
