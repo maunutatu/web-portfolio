@@ -1,13 +1,10 @@
 import './Contact.css'
 import LinkedInLogo from '../Assets/linkedinlogo.png'
 
-interface ContactProps {
-    opacity: number
-}
 
-const Contact = (props: ContactProps) => {
+const Contact = () => {
     return (
-        <section style={{opacity: props.opacity}}>
+        <section className={'hidden'}>
             <h2 className={'contactHeader'}>Contact</h2>
             <div className={'contactBox'}>
                 <p className={'contactText'}>Got interested? Feel free to contact me 🤙</p>

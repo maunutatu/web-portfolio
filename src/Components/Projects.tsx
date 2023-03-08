@@ -4,14 +4,13 @@ import BlogAppImg from '../Assets/BlogApp.png'
 import KanbanBoardAppImg from '../Assets/KanbanBoardApp.png'
 import PorfolioImg from '../Assets/Website.png'
 
-interface ProjectsProps {
-    opacity: number
-}
 
-const Projects = (props: ProjectsProps) => {
+const Projects = () => {
     return (
-            <section style={{opacity: props.opacity}}>
-                <h1 className={'projectsHeader'}>Projects:</h1>
+            <section>
+                <div className={'hidden'}>
+                  <h1 className={'projectsHeader'}>Projects:</h1>
+                </div>
                 <Project name={'Blog App'} image={BlogAppImg}
                          description={'A blog sharing platform. Users can share blogs and interact with blog recommendations of their peers. A single page application showcasing end-to-end Javascript-based web development'}
                          tech={'Javascript + React + Node + Express + MongoDB'} repositoryLink={'https://github.com/maunutatu/Blog_App'}/>

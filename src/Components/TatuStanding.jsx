@@ -30,8 +30,8 @@ const TatuAnimations = forwardRef((props, ref) => {
   }
 
   const kickAnimation = () => {
-    wavingAnimationActions[names[0]].fadeOut(0.5)
-    textingAnimationActions[names[0]].reset().fadeIn(0.5).play()
+    textingAnimationActions[names[0]].fadeOut(0.5)
+    kickingAnimationActions[names[0]].reset().fadeIn(0.5).play()
   }
 
   const standAnimation = () => {

@@ -3,3 +3,12 @@
     place-items: center;
     align-content: center;
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+}

@@ -10,7 +10,7 @@ interface ProjectProps {
 
 const Project = (props: ProjectProps) => {
     return (
-        <div className={'project'}>
+        <div className={'project hidden'}>
             <h2 className={'projectHeader'}>{props.name}</h2>
             <img className={'projectImage'} src={props.image} alt={props.name + ' image'}/>
             <p className={'projectDescription'}>{props.description}</p>

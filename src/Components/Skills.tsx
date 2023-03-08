@@ -1,13 +1,8 @@
 import './Skills.css'
 
-
-interface SkillsProps {
-    opacity: number
-}
-
-const Skills = (props: SkillsProps) => {
+const Skills = () => {
     return (
-        <section style={{opacity: props.opacity}}>
+        <section className={'hidden'}>
             <h1 className={'skillsHeader'}>Skills:</h1>
             <div className={'skillSections'}>
                 <div className={'skillSection'}>
