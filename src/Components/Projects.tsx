@@ -17,7 +17,7 @@ const Projects = () => {
                 <Project name={'Kanban Board App'} image={KanbanBoardAppImg} description={'A Kanban board -application, similar to likes of Trello and Microsoft Planner where users can create and use kanban boards. Kanban cards have different functionalities for following progress, schedule, attachments etc.'}
                          tech={'Scala + JavaFX'} repositoryLink={'https://github.com/maunutatu/kanban-board-app'}/>
                 <Project name={'Web Portfolio'} image={PorfolioImg} description={'This website is to showcase my web development skills. Includes 3D model animations and responsive web design.'}
-                         tech={'Typescript + React + Three.js'} repositoryLink={'https://github.com/maunutatu/web-portrfolio'} />
+                         tech={'Typescript + React + Three.js'} repositoryLink={'https://github.com/maunutatu/web-portfolio'} />
             </section>
     )
 }
