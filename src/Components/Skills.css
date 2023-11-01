@@ -12,14 +12,21 @@
     background: whitesmoke;
     border-radius: 5%;
     margin: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .skillHeader {
+    text-align: center;
     margin: 10px;
 }
 
 li {
     margin-left: 20px;
     margin-bottom: 10px;
+}
+
+ul {
+    margin: 5px;
 }
 

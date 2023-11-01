@@ -6,7 +6,7 @@ const Other = () => {
             <section className={'hidden'}>
                 <h2 className={'otherHeader'}>What else do I do?</h2>
                 <p className={'otherText'}>In addition to studying and coding, I compete in kickboxing at the highest level.
-                    I won bronze in the 2022 European Championships and am preparing for the 2023 European Olympic Games.
+                    I won bronze in the 2022 European Championships and am preparing for the 2023 World Championships.
                     Sports has taught me that devoting to a long-term goal means rigorous work to accomplish the premeditated success.
                     Working under great pressure and in a collectively dedicated environment has developed me as a person and sharpened my social and mental abilities.</p>
 
