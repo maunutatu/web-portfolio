@@ -13,7 +13,7 @@ function App() {
         if (window.innerHeight <= 844) {
             return (-0.0062146892655 * window.innerHeight + 14.2451977)
         } else if (window.innerHeight <= 1100) {
-            return 8
+            return 8.5
         } else {
             return 7.5
         }
