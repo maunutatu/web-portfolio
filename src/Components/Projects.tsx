@@ -9,7 +9,7 @@ const Projects = () => {
     return (
             <section>
                 <div className={'hidden'}>
-                  <h1 className={'projectsHeader'}>Personal projects:</h1>
+                  <h1 className={'sectionHeader'}>Personal projects:</h1>
                 </div>
                 <Project name={'Blog App'} image={BlogAppImg}
                          description={'A blog sharing platform. Users can share blogs and interact with blog recommendations of their peers. A single page application showcasing end-to-end Javascript-based web development'}

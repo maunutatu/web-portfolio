@@ -5,7 +5,7 @@ import LinkedInLogo from '../Assets/linkedinlogo.png'
 const Contact = () => {
     return (
         <section className={'hidden'}>
-            <h2 className={'contactHeader'}>Contact</h2>
+            <h2 className={'sectionHeader'}>Contact</h2>
             <div className={'contactBox'}>
                 <p className={'contactText'}>Got interested? Feel free to contact me 🤙</p>
                 <br/>

@@ -1,5 +1,5 @@
 .nameHeader {
-    font-size: clamp(2rem, 3vw, 5rem);
+    font-size: 4rem;
     font-weight: 500;
     color: whitesmoke;
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 .introductionHeader {
-    font-size: clamp(1.5rem, 2.0vw, 4rem);
+    font-size: 3rem;
     color: whitesmoke;
     opacity: 0.8;
     font-weight: 500;
@@ -21,7 +21,8 @@
     border-radius: 50px;
     position: relative;
     margin-top: 40%;
-    margin-left: 35%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .indicator:before {
     content: "";
@@ -48,8 +49,12 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    .titleSection {
-        margin-right: 10%;
+@media screen and (max-width: 800px) {
+    .introductionHeader {
+        font-size: 2rem;
+    }
+
+    .nameHeader {
+        font-size: 3rem;
     }
 }

@@ -12,3 +12,16 @@
 .show {
     opacity: 1;
 }
+
+.sectionHeader {
+    text-align: center;
+    font-size: 3rem;
+    color: whitesmoke;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 800px) {
+    .sectionHeader {
+        font-size: 2rem;
+    }
+}

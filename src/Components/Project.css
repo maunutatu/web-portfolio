@@ -4,7 +4,7 @@
 
 .projectHeader {
     text-align: center;
-    font-size: clamp(1.2rem, 1.5vw, 4rem);
+    font-size: 2rem;
     color: whitesmoke;
     opacity: 1;
 }
@@ -28,12 +28,11 @@
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .projectImage {
         width: 300px;
     }
-
-    .project {
-        margin-left: 10%;
+    .projectHeader {
+        font-size: 1.5rem;
     }
 }

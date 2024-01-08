@@ -4,7 +4,7 @@ import './Other.css'
 const Other = () => {
     return (
             <section className={'hidden'}>
-                <h2 className={'otherHeader'}>What else do I do?</h2>
+                <h2 className={'sectionHeader'}>What else do I do?</h2>
                 <p className={'otherText'}>In addition to studying and coding, I compete in kickboxing at the highest level.
                     The latest pinnacle of my sport success is winning gold in the 2023 World Championships.
                     Sports has taught me that devoting to a long-term goal means rigorous work to accomplish the premeditated success.

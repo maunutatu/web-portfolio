@@ -21,15 +21,23 @@ function App() {
 
     const positionX = () => {
         if(window.innerWidth <= 800) {
-            return -0.2
+            return -0.6
         } else {
             return 0.8
         }
     }
 
+    const positionY = () => {
+        if(window.innerWidth <= 800) {
+            return -0.8
+        } else {
+            return -0.9
+        }
+    }
+
     const positionZ = () => {
         if(window.innerWidth <= 800) {
-            return -2
+            return -3
         } else {
             return 0
         }
@@ -48,7 +56,7 @@ function App() {
                     shadow-mapSize-height={1024}
                   />
                   <ScrollControls pages={pages()} damping={0}>
-                      <group position={[positionX(), -0.9, positionZ()]}>
+                      <group position={[positionX(), positionY(), positionZ()]}>
                           <Content animationRef={animationRef}/>
                           <TatuAnimations ref={animationRef}/>
                       </group>

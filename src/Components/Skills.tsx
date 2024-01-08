@@ -2,8 +2,8 @@ import './Skills.css'
 
 const Skills = () => {
     return (
-      <section className={'hidden'}>
-          <h1 className={'skillsHeader'}>Skills:</h1>
+      <section className={'hidden skillsBlock'}>
+          <h1 className={'sectionHeader'}>Skills:</h1>
           <div className={'skillSections'}>
               <div className={'skillSection'}>
                   <h2 className={'skillHeader'}>📲 Frontend 👨‍💻</h2>
