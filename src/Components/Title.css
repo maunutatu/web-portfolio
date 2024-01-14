@@ -24,6 +24,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 .indicator:before {
     content: "";
     position: absolute;
@@ -41,10 +42,12 @@
 
 @keyframes animate {
     0% {
-        opacity: 1; top: 7.5px;
+        opacity: 1;
+        top: 7.5px;
     }
     100% {
-        opacity: 0; top: 25px;
+        opacity: 0;
+        top: 25px;
         transform: scale(0.8);
     }
 }

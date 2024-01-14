@@ -1,22 +1,19 @@
+const AnimationLogic = (animationRef: React.RefObject<any>): void => {
+  const sectionForWaveAnimation: Element | null = document.querySelector('.nameHeader')
+  const sectionForTextingAnimation: Element | null = document.querySelector('.aboutMeText')
+  const sectionForKickingAnimation: Element | null = document.querySelector('.otherText')
+  const sectionForStandingAnimation: Element | null = document.querySelector('.contactText')
 
-
-
-const AnimationLogic = (animationRef: React.RefObject<any>) => {
-  const sectionForWaveAnimation = document.querySelector('.nameHeader')
-  const sectionForTextingAnimation = document.querySelector('.aboutMeText')
-  const sectionForKickingAnimation = document.querySelector('.otherText')
-  const sectionForStandingAnimation = document.querySelector('.contactText')
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
+    entries.forEach((entry: IntersectionObserverEntry): void => {
       if (entry.isIntersecting) {
-        if (entry.target.className == 'nameHeader') {
+        if (entry.target.className === 'nameHeader') {
           animationRef.current.waveAnimation()
-        } else if (entry.target.className == 'aboutMeText') {
+        } else if (entry.target.className === 'aboutMeText') {
           animationRef.current.textAnimation()
-        } else if (entry.target.className == 'otherText') {
+        } else if (entry.target.className === 'otherText') {
           animationRef.current.kickAnimation()
-        } else if (entry.target.className == 'contactText') {
+        } else if (entry.target.className === 'contactText') {
           animationRef.current.standAnimation()
         }
         observer.unobserve(entry.target)

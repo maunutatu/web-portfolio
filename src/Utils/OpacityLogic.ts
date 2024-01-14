@@ -1,10 +1,6 @@
-
-
-const OpacityLogic = () => {
-  const hiddenSections = document.querySelectorAll('.hidden')
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+const OpacityLogic = (sections: NodeListOf<Element>): void => {
+  const interSectionObserver: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
+    entries.forEach((entry: IntersectionObserverEntry): void => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show')
       } else {
@@ -15,7 +11,7 @@ const OpacityLogic = () => {
     threshold: 0.3
   })
 
-  hiddenSections.forEach((section) => observer.observe(section))
+  sections.forEach((section: Element) => interSectionObserver.observe(section))
 }
 
 export default OpacityLogic

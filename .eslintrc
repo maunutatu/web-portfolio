@@ -4,12 +4,18 @@
     "es6": true,
     "jest": true
   },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
   "settings": {
     "react": {
       "pragma": "React",
@@ -39,10 +45,15 @@
     "eqeqeq": "error",
     "no-trailing-spaces": "error",
     "object-curly-spacing": [
-      "error", "never"
+      "error",
+      "always"
     ],
     "arrow-spacing": [
-      "error", { "before": true, "after": true }
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
     ]
   }
 }
