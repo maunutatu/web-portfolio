@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e663dad.css",
-    "main.js": "/static/js/main.33ab0174.js",
-    "static/media/Website.png": "/static/media/Website.83982195601b5d44043e.png",
-    "static/media/linkedinlogo.png": "/static/media/linkedinlogo.b1bebb391a157454d569.png",
-    "static/media/KanbanBoardApp.png": "/static/media/KanbanBoardApp.80b7bb23a259be76c035.png",
-    "static/media/BlogApp.png": "/static/media/BlogApp.e4618581280e55c2d6a8.png",
-    "index.html": "/index.html",
-    "main.6e663dad.css.map": "/static/css/main.6e663dad.css.map",
-    "main.33ab0174.js.map": "/static/js/main.33ab0174.js.map"
+    "main.css": "/web-portfolio/static/css/main.6e663dad.css",
+    "main.js": "/web-portfolio/static/js/main.0ab3191a.js",
+    "static/media/Website.png": "/web-portfolio/static/media/Website.83982195601b5d44043e.png",
+    "static/media/linkedinlogo.png": "/web-portfolio/static/media/linkedinlogo.b1bebb391a157454d569.png",
+    "static/media/KanbanBoardApp.png": "/web-portfolio/static/media/KanbanBoardApp.80b7bb23a259be76c035.png",
+    "static/media/BlogApp.png": "/web-portfolio/static/media/BlogApp.e4618581280e55c2d6a8.png",
+    "index.html": "/web-portfolio/index.html",
+    "main.6e663dad.css.map": "/web-portfolio/static/css/main.6e663dad.css.map",
+    "main.0ab3191a.js.map": "/web-portfolio/static/js/main.0ab3191a.js.map"
   },
   "entrypoints": [
     "static/css/main.6e663dad.css",
-    "static/js/main.33ab0174.js"
+    "static/js/main.0ab3191a.js"
   ]
 }
