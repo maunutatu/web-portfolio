@@ -15,7 +15,7 @@ const Contact = () => {
         <p className={'contactText'}>📩 </p>
         <p className={'contactText'}> tatu.maunu@aalto.fi</p>
         <br/>
-        <a className={'logoLink'} href={'https://www.linkedin.com/in/tatu-maunu-250652219/'} target="_blank"
+        <a className={'logoLink'} href={'https://www.linkedin.com/in/tatu-maunu/'} target="_blank"
           rel="noopener noreferrer">
           <img style={{ width: '40px' }} src={LinkedInLogo} alt={'linkedinLogo'}/>
         </a>
