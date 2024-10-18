@@ -1,3 +1,5 @@
+import { LoopRepeat } from 'three'
+
 const AnimationLogic = (animationRef: React.RefObject<any>): void => {
   const sectionForWaveAnimation: Element | null = document.querySelector('.nameHeader')
   const sectionForTextingAnimation: Element | null = document.querySelector('.aboutMeText')
@@ -7,16 +9,27 @@ const AnimationLogic = (animationRef: React.RefObject<any>): void => {
   const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
     entries.forEach((entry: IntersectionObserverEntry): void => {
       if (entry.isIntersecting) {
-        if (entry.target.className === 'nameHeader') {
-          animationRef.current.waveAnimation()
-        } else if (entry.target.className === 'aboutMeText') {
-          animationRef.current.textAnimation()
-        } else if (entry.target.className === 'otherText') {
-          animationRef.current.kickAnimation()
-        } else if (entry.target.className === 'contactText') {
-          animationRef.current.standAnimation()
+        const { currentAnimationRef, standAnimation, waveAnimation, textAnimation, kickAnimation, mixer } = animationRef.current
+        const currentAnimation = currentAnimationRef.current
+        switch (entry.target.className) {
+        case 'nameHeader':
+          waveAnimation.reset().crossFadeFrom(currentAnimation === 'stand' ? standAnimation : textAnimation, 0.5, true).play()
+          currentAnimationRef.current = 'wave'
+          break
+        case 'aboutMeText':
+          textAnimation.reset().crossFadeFrom(currentAnimation === 'wave' ? waveAnimation : standAnimation, 0.5, true).play()
+          currentAnimationRef.current = 'text'
+          break
+        case 'otherText':
+          if(currentAnimation === 'kick') return
+          kickAnimation.reset().crossFadeFrom(currentAnimation === 'text' ? textAnimation : standAnimation, 0.5, true).setLoop(LoopRepeat, 2).play()
+          currentAnimationRef.current = 'kick'
+          mixer.addEventListener('finished', () => {
+            standAnimation.reset().play()
+            currentAnimationRef.current = 'stand'
+          })
+          break
         }
-        observer.unobserve(entry.target)
       }
     })
   })
