@@ -23,7 +23,7 @@ const TatuAnimations = forwardRef((props, ref) => {
 
   const { actions, mixer } = useAnimations(animations, group)
 
-  const currentAnimationRef = useRef(actions.stand)
+  const currentAnimationRef = useRef(null)
 
   useImperativeHandle(ref, () => {
     return {
@@ -34,11 +34,6 @@ const TatuAnimations = forwardRef((props, ref) => {
       kickAnimation: actions.kick,
       standAnimation: actions.stand
     }
-  })
-
-  useEffect(() => {
-    actions.stand.play()
-    currentAnimationRef.current = 'stand'
   })
 
   return (

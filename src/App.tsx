@@ -1,49 +1,26 @@
 /* eslint-disable react/no-unknown-property */
-import { useRef, Suspense } from 'react'
+import { useRef, Suspense, RefObject, MutableRefObject } from 'react'
 import './App.css'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, Vector3 } from '@react-three/fiber'
 import Content from './Components/Content'
 import { ScrollControls } from '@react-three/drei'
 import TatuAnimations from './Components/TatuStanding'
 import Loading from './Components/Loading'
+import { AnimationAction, AnimationMixer } from 'three'
+import useCalculateLayout from './Utils/useCalculateLayout'
+
+export type TAnimationControls = {
+  currentAnimationRef: MutableRefObject<string>,
+  mixer: AnimationMixer,
+  waveAnimation: AnimationAction,
+  textAnimation: AnimationAction,
+  kickAnimation: AnimationAction,
+  standAnimation: AnimationAction
+}
 
 function App(): JSX.Element {
-
-  const pages = (): number => {
-    if (window.innerHeight <= 844) {
-      return (-0.0062146892655 * window.innerHeight + 14.2451977)
-    } else if (window.innerHeight <= 1100) {
-      return 8.5
-    } else {
-      return 7.5
-    }
-  }
-
-  const positionX = (): number => {
-    if (window.innerWidth <= 800) {
-      return -0.6
-    } else {
-      return 0.8
-    }
-  }
-
-  const positionY = (): number => {
-    if (window.innerWidth <= 800) {
-      return -0.8
-    } else {
-      return -0.9
-    }
-  }
-
-  const positionZ = (): number => {
-    if (window.innerWidth <= 800) {
-      return -3
-    } else {
-      return 0
-    }
-  }
-
-  const animationRef: React.MutableRefObject<undefined> = useRef()
+  const animationRef: RefObject<TAnimationControls> = useRef(null)
+  const { pages, positions, calculatePages } = useCalculateLayout()
 
   return (
     <>
@@ -55,9 +32,9 @@ function App(): JSX.Element {
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
           />
-          <ScrollControls pages={pages()} damping={0}>
-            <group position={[positionX(), positionY(), positionZ()]}>
-              <Content animationRef={animationRef}/>
+          <ScrollControls pages={pages} damping={0}>
+            <group position={positions}>
+              <Content contentCallback={calculatePages} animationRef={animationRef}/>
               <TatuAnimations ref={animationRef}/>
             </group>
             <mesh

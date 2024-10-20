@@ -1,31 +1,33 @@
-import { LoopRepeat } from 'three'
+import { AnimationAction, LoopRepeat } from 'three'
+import { RefObject } from 'react'
+import { TAnimationControls } from '../App'
 
-const AnimationLogic = (animationRef: React.RefObject<any>): void => {
+const AnimationLogic = (animationRef: RefObject<TAnimationControls>): void => {
   const sectionForWaveAnimation: Element | null = document.querySelector('.nameHeader')
   const sectionForTextingAnimation: Element | null = document.querySelector('.aboutMeText')
   const sectionForKickingAnimation: Element | null = document.querySelector('.otherText')
   const sectionForStandingAnimation: Element | null = document.querySelector('.contactText')
 
   // Referencing the animation directly causes problems. Have to use this string ref to work around it.
-  const getCurrentAnimation = () => {
-    const { currentAnimationRef, standAnimation, waveAnimation, textAnimation, kickAnimation } = animationRef.current
+  const getCurrentAnimation = (): AnimationAction => {
+    const { currentAnimationRef, standAnimation, waveAnimation, textAnimation, kickAnimation } = animationRef.current!
     const currentAnimation = currentAnimationRef.current
     switch (currentAnimation) {
-    case 'stand':
-      return standAnimation
     case 'wave':
       return waveAnimation
     case 'text':
       return textAnimation
     case 'kick':
       return kickAnimation
+    default:
+      return standAnimation
     }
   }
 
   const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]): void => {
     entries.forEach((entry: IntersectionObserverEntry): void => {
       if (entry.isIntersecting) {
-        const { currentAnimationRef, standAnimation, waveAnimation, textAnimation, kickAnimation, mixer } = animationRef.current
+        const { currentAnimationRef, standAnimation, waveAnimation, textAnimation, kickAnimation, mixer } = animationRef.current!
         switch (entry.target.className) {
         case 'nameHeader':
           waveAnimation.reset().crossFadeFrom(getCurrentAnimation(), 0.5, true).play()
