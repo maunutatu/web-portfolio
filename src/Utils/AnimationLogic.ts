@@ -34,6 +34,7 @@ const AnimationLogic = (animationRef: RefObject<TAnimationControls>): void => {
           currentAnimationRef.current = 'wave'
           break
         case 'aboutMeText':
+          if (currentAnimationRef.current === 'text') return
           textAnimation.reset().crossFadeFrom(getCurrentAnimation(), 0.5, true).play()
           currentAnimationRef.current = 'text'
           break
